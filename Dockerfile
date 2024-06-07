@@ -1,5 +1,5 @@
 #=============================================#
-#                 v.1.3.4                     #  
+#                 v.1.3.7                     #  
 # █▀▀▀█ █  █ █  █ ▄▀▀▄ ▀█▀ █     █▀▄▀█ █▀▀▄   #
 # ▀▀▀▄▄ █  █ █▀▀█ █▄▄█  █  █     █ █ █ █  █   #
 # █▄▄▄█ ▀▄▄▀ █  █ █  █ ▄█▄ █▄▄█  █   █ █▄▄▀   #
@@ -8,20 +8,18 @@
 # 
 #    * @project_name : Suhail-Md
 #    * @author : @SuhailTechInfo
-#    * @youtube : https://www.youtube.com/c/@SuhailTechInfo
+#    * @youtube : https://www.youtube.com/SuhailTechInfo
 #    * @description : Suhail-Md ,A Multi-functional whatsapp bot md.
-#    * @version 1.3.4
-# 
-# Don't change this [ /SuhailTechInfo/ ] name!
-# Change from below link, else bot not works!
+#    * @version 1.3.7
 
 
  
 
 FROM quay.io/suhailtechinfo/suhail-v2
-RUN git clone https://github.com/SuhailTechInfo/Suhail-Md /root/Suhail
-WORKDIR /root/Suhail
-RUN npm install
+RUN git clone https://github.com/SuhailTechInfo/Suhail-Md-V1 /root/smdd
+RUN rm -rf /root/smdd/.git
+WORKDIR /root/smdd
+RUN npm install || yarn install
 EXPOSE 8000
 CMD ["npm","start" ] 
 
